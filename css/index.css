@@ -1,0 +1,388 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+/* Variables */
+
+:root {
+    --principal: #161616;
+    --secundario: #5a7984;
+    --textos: #E5E5E5;
+    --font-primary: "Shippori Antique B1" , sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+    --text-lg: 2em;
+    --text-md: 1.8em; 
+
+}
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    background-image: url(../public/img/layered-waves-haikei.svg);
+    background-size: 100%;
+    font-size: 62.5%;
+    font-family: var(--font-primary)
+}
+ul{
+    list-style-type: none
+}
+a{
+    text-decoration: none;
+    color: #E5E5E5;
+    display: inline-block;
+}
+/* Helpers */
+
+.flex-row{
+    display: flex;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+
+}
+.container{
+    max-width:  1080px;
+    margin: 0 auto;
+}
+body{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 125px 600px 70px;
+    grid-template-areas: 
+    "emptyLeft header header header header header header emptyRight"
+    "emptyLeft bigSection bigSection bigSection bigSection bigSection bigSection emptyRight"
+    "emptyLeft footer footer footer footer footer footer emptyRight";
+}
+/* HEADER*/
+
+header{
+    grid-area: header;
+}
+header #logo{
+padding-top: 10px;
+padding-bottom: 10px;
+}
+header .navbar{
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+header .menu{
+    justify-content: space-between;
+}
+header .menu__item{
+    border: 2px solid var(--principal);
+    transition: border-color .3s ease-in-out
+}
+header .menu__item:hover{
+    border: 2px solid var(--textos);
+}
+.menu .menu__item .menu__link{
+    font-size: var(--text-md);
+    padding: 10px;
+}
+
+
+/* EMPTY LEFT SIDE*/
+
+.emptyLeft{
+
+    grid-area: emptyLeft;
+}
+
+/* INDEX */
+
+.bigSection{
+    justify-content: flex-start;
+    padding-top: 20px;
+    grid-area: bigSection;
+    gap: ;
+}
+
+section.bigSection p.textoPrincipal{
+    font-family: var(--font-secondary);
+    font-size: 10rem;
+    color: var(--textos);
+}
+section.bigSection p.textoSecundario{
+    font-family: var(--font-primary);
+    color: var(--textos);
+    font-size: 3rem;
+}
+picture#buttom{
+
+    padding-top: 20px;
+}
+picture#buttom img{
+    transition: transform .4s ease-in-out;
+}
+picture#buttom img:hover{
+    transform: scale(1.1);
+}
+
+/* ESTUDIO */
+
+section.estudio{
+    background-color: var(--principal);
+    justify-content: space-around;
+    padding: 20px;
+
+}
+section.estudio div.estudioUno{
+    align-items: center;
+    
+}
+section.estudio div.estudioUno h2{
+    color: var(--textos);
+    font-family: var(--font-secondary);
+    font-size: 3.5rem;
+}
+section.estudio div.estudioUno p.parrafoEstudio{
+    color: var(--textos);
+    font-size: 2rem;
+} 
+section.estudio div.estudioUno img.estudio{
+    width: 300px;
+}
+section.estudio div.estudioDos{
+    flex-direction: row-reverse;
+    align-items: center;
+}
+section.estudio div.estudioDos h2{
+    color: var(--textos);
+    font-family: var(--font-secondary);
+    font-size: 3.5rem;
+}
+section.estudio div.estudioDos p.parrafoEstudio{
+    color: var(--textos);
+    font-size: 2rem;
+    
+}section.estudio div.estudioDos img.estudio{
+    width: 300px;
+}
+
+/* PRODUCTORES */
+
+section.productores{
+    background-color: var(--principal);
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+}
+section.productores div.productores__seccionUno{
+    align-items: center;
+    
+}
+section.productores div.productores__seccionUno div.productores__seccionUno__texto{
+    align-items: center;
+}
+section.productores div.productores__seccionUno .productorImgUno{
+    width: 300px;
+}
+section.productores div.productores__seccionUno div.productores__seccionUno__texto h2{
+    color: var(--textos);
+    font-family: var(--font-secondary);
+    font-size: 3rem;
+}
+section.productores div.productores__seccionUno div.productores__seccionUno__texto .parrafoProductores{
+    color: var(--textos);
+    font-size: 1.5rem;
+}
+section.productores div.productores__seccionDos{
+    align-items: center;
+}
+section.productores div.productores__seccionDos div.productores__seccionDos__texto{
+    align-items: center;
+}
+section.productores div.productores__seccionDos .productorImgDos{
+    width: 300px;
+}
+section.productores div.productores__seccionDos div.productores__seccionDos__texto h2{
+    color: var(--textos);
+    font-family: var(--font-secondary);
+    font-size: 3rem;
+}
+section.productores div.productores__seccionDos div.productores__seccionDos__texto .parrafoProductores{
+    color: var(--textos);
+    font-size: 1.5rem;
+}
+
+/* CONTACTO */
+
+form{
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.form label{
+    color: var(--textos);
+    font-family: var(--font-primary);
+    font-size: 2rem;
+}
+.form__nombre{
+    padding: .8rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+.form__email{
+    padding: .8rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+.form__textarea{
+    padding: .8rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+ 
+/* EMPTY RIGHT SIDE*/
+
+.emptyRight{
+
+    grid-area: emptyRight;
+    color: var(--textos);
+}
+
+/* FOOTER */
+
+footer{
+
+    grid-area: footer;
+}
+footer{
+align-items: center;
+justify-content: flex-end;
+}
+footer p.parrafo{
+    padding-right: 250px;
+    font-size: 1.4rem;
+    color: var(--textos);
+}
+
+@media screen and (max-width: 768px) {
+    /* HEADER */
+
+    header{
+        flex-wrap: wrap;
+        padding: 2rem;
+        grid-column: 1 / 9;
+    }
+    header a#logo{
+        width: 70px;
+    }
+
+    header .navbar{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    header ul.menu{
+        font-size: 60%;
+    }
+
+
+    
+    /* INDEX */
+
+    section.bigsection{
+        grid-column: 1 / 9;
+    }
+    
+    section.bigSection p.textoPrincipal{
+        
+        font-size: 6rem;
+        
+    }
+    section.bigSection p.textoSecundario{        
+        font-size: 2.5rem;
+    }
+
+    /* ESTUDIO */
+
+    section.estudio{
+    justify-content: space-around;
+    
+
+    }
+    section.estudio div.estudioUno{
+    flex-direction: column;
+    align-items: center;
+    
+    }
+    section.estudio div.estudioUno h2{
+        font-size: 2.5rem;
+    }
+    section.estudio div.estudioUno p.parrafoEstudio{
+        color: var(--textos);
+        font-size: 1.5rem;
+    } 
+    section.estudio div.estudioUno img.estudio{
+    width: 200px;
+    }
+    section.estudio div.estudioDos{
+        flex-direction: column;
+        align-items: center;
+    }
+    section.estudio div.estudioDos h2{
+    color: var(--textos);
+    font-family: var(--font-secondary);
+    font-size: 2.5rem;
+    }
+    section.estudio div.estudioDos p.parrafoEstudio{
+    color: var(--textos);
+    font-size: 1.5rem;
+    
+    }section.estudio div.estudioDos img.estudio{
+        width: 200px;
+    }
+
+    /* PRODUCTORES */
+
+    section.productores{
+    flex-direction: column;
+    gap: 2rem;
+    }
+    section.productores div.productores__seccionUno .productorImgUno{
+    width: 200px;
+    }
+    section.productores div.productores__seccionUno div.productores__seccionUno__texto h2{
+    font-size: 2.5rem;
+    }
+    section.productores div.productores__seccionUno div.productores__seccionUno__texto .parrafoProductores{
+    font-size: 1.5rem;
+    }
+    section.productores div.productores__seccionDos .productorImgDos{
+        width: 200px;
+    }
+    section.productores div.productores__seccionDos div.productores__seccionDos__texto h2{
+        font-size: 2.5rem;
+    }
+    section.productores div.productores__seccionDos div.productores__seccionDos__texto .parrafoProductores{
+        font-size: 1.5rem;
+    }
+
+    /* FORM */
+
+    form{
+        align-items: center;
+    }
+
+    /* FOOTER */
+
+    footer{
+        justify-content: space-around;
+        grid-column: 1 / 9;
+    }
+    footer p.parrafo{
+        padding: 0;
+        font-size: 1rem;
+    }
+}

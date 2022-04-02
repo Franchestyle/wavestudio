@@ -269,6 +269,12 @@ footer p.parrafo{
 }
 
 @media screen and (max-width: 768px) {
+    /* BODY */
+
+    body{
+        background-color: var(--principal);
+    }
+
     /* HEADER */
 
     header{
@@ -287,7 +293,13 @@ footer p.parrafo{
     header ul.menu{
         font-size: 60%;
     }
-
+    header .menu__item{
+        border: none;
+    
+    }
+    header .menu__item:hover{
+        border: none;
+    }
 
     
     /* INDEX */
